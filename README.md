@@ -1,6 +1,6 @@
 # Add Syntax Highlighting to Magento Admin
 
-![Magento Highlighter]()
+![Magento Highlighter](http://i.imgur.com/hTwUKbP.png)
 
 ## Feature
 
