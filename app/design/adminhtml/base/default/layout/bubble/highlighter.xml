@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addItem">
+                <type>js</type><name>codemirror/lib/codemirror.js</name>
+            </action>
+            <action method="addItem">
+                <type>js</type><name>codemirror/mode/htmlmixed/htmlmixed.js</name>
+            </action>
+            <action method="addItem">
+                <type>js</type><name>codemirror/addon/edit/closetag.js</name>
+            </action>
+            <action method="addItem">
+                <type>js</type><name>codemirror/mode/xml/xml.js</name>
+            </action>
+            <action method="addItem">
+                <type>js</type><name>codemirror/mode/javascript/javascript.js</name>
+            </action>
+            <action method="addItem">
+                <type>js</type><name>codemirror/mode/css/css.js</name>
+            </action>
+            <action method="addItem">
+                <type>js_css</type><name>codemirror/lib/codemirror.css</name>
+            </action>
+            <action method="addItem">
+                <type>js</type><name>bubble/highlighter.js</name>
+            </action>
+        </reference>
+        <reference name="before_body_end">
+            <block type="bubble_highlighter/adminhtml_highlighter" name="bubble_highlighter" template="bubble/highlighter/js.phtml" />
+        </reference>
+    </default>
+</layout>

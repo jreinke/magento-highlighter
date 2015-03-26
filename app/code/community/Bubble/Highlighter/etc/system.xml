@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <bubble translate="label">
+            <label>Bubble Extensions</label>
+            <sort_order>1100</sort_order>
+        </bubble>
+    </tabs>
+    <sections>
+        <bubble_highlighter translate="label" module="bubble_highlighter">
+            <label>Highlighter</label>
+            <tab>bubble</tab>
+            <sort_order>50</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <codemirror translate="label comment">
+                    <label>Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <enable translate="label comment">
+                            <label>Enable Syntax Highlighting</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </enable>
+                        <theme translate="label comment">
+                            <label>Theme</label>
+                            <comment><![CDATA[<a href="http://codemirror.net/demo/theme.html" target="_blank">http://codemirror.net/demo/theme.html</a>]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>bubble_highlighter/system_config_source_theme</source_model>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends><enable>1</enable></depends>
+                        </theme>
+                        <indent_unit translate="label comment">
+                            <label>Indent Unit</label>
+                            <comment><![CDATA[<a href="http://codemirror.net/doc/manual.html#option_indentUnit" target="_blank">http://codemirror.net/doc/manual.html#option_indentUnit</a>]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <validate>validate-greater-than-zero validate-digits</validate>
+                            <depends><enable>1</enable></depends>
+                        </indent_unit>
+                        <line_numbers translate="label comment">
+                            <label>Show Line Numbers</label>
+                            <comment><![CDATA[<a href="http://codemirror.net/doc/manual.html#option_lineNumbers" target="_blank">http://codemirror.net/doc/manual.html#option_lineNumbers</a>]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends><enable>1</enable></depends>
+                        </line_numbers>
+                        <line_wrapping translate="label comment">
+                            <label>Enable Line Wrapping</label>
+                            <comment><![CDATA[<a href="http://codemirror.net/doc/manual.html#option_lineWrapping" target="_blank">http://codemirror.net/doc/manual.html#option_lineWrapping</a>]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends><enable>1</enable></depends>
+                        </line_wrapping>
+                        <auto_close_tags translate="label comment">
+                            <label>Auto Close Tags</label>
+                            <comment><![CDATA[<a href="http://codemirror.net/doc/manual.html#addon_closetag" target="_blank">http://codemirror.net/doc/manual.html#addon_closetag</a>]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends><enable>1</enable></depends>
+                        </auto_close_tags>
+                    </fields>
+                </codemirror>
+            </groups>
+        </bubble_highlighter>
+    </sections>
+</config>
