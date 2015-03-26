@@ -1,0 +1,8 @@
+"Settings","Paramètres"
+"Enable Syntax Highlighting","Activer la coloration syntaxique"
+"<p><a href=""http://codemirror.net/"" target=""_blank"" title=""Official Website"">CodeMirror</a> allows you to color the HTML code you are typing if WYSIWYG editor is disabled.</p>","<p><a href=""http://codemirror.net/"" target=""_blank"" title=""Site officiel"">CodeMirror</a> permet la coloration syntaxique du code HTML que vous tapez lorsque l'éditeur WYSIWYG est désactivé.</p>"
+"Enable Syntax Highlighting","Activer la coloration syntaxique"
+"Indent Unit","Unité d'indentation"
+"Show Line Numbers","Afficher les numéros de ligne"
+"Enable Line Wrapping","Activer le retour automatique à la ligne"
+"Auto Close Tags","Fermer automatiquement les balises"
