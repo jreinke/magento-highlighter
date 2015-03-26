@@ -119,7 +119,7 @@ BubbleHighlighter.prototype = {
         }
 
         $$('.form-buttons button.save').invoke('observe', 'click', function() {
-            this.setup(cm);
+            this.setup(cm, textarea);
         }.bind(this));
 
         // If textarea is hidden, we can't set cursor position into it
