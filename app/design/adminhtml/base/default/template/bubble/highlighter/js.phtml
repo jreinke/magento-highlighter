@@ -2,7 +2,7 @@
 /**
  * @category    Bubble
  * @package     Bubble_Highlighter
- * @version     1.0.1
+ * @version     1.0.0
  * @copyright   Copyright (c) 2015 BubbleShop (https://www.bubbleshop.net)
  */
 /**
@@ -26,6 +26,35 @@ Event.observe(window, 'load', function() {
         Windows.addObserver({
             onShow: function () {
                 highlighter.find();
+            }
+        });
+    }
+
+    if ($('template_styles')) {
+        highlighter.create($('template_styles'));
+    }
+
+    // Handle transactional emails editor
+    if ($('template_text')) {
+        highlighter.create($('template_text'));
+
+        Ajax.Responders.register({
+            onComplete: function() {
+                if ($('template_text').value.length > 0) {
+                    if ($('template_text').hasClassName('bubble')) {
+                        $('template_text').next().remove();
+                        $('template_text').removeClassName('bubble')
+                    }
+                    highlighter.create($('template_text'));
+
+                    if ($('template_styles')) {
+                        if ($('template_styles').hasClassName('bubble')) {
+                            $('template_styles').next().remove();
+                            $('template_styles').removeClassName('bubble')
+                        }
+                        highlighter.create($('template_styles'));
+                    }
+                }
             }
         });
     }
