@@ -2,6 +2,9 @@
 <layout version="0.1.0">
     <default>
         <reference name="head">
+            <action method="removeItem">
+                <type>js</type><name>mage/adminhtml/wysiwyg/tiny_mce/setup.js</name>
+            </action>
             <action method="addItem">
                 <type>js</type><name>codemirror/lib/codemirror.js</name>
             </action>
@@ -25,6 +28,9 @@
             </action>
             <action method="addItem">
                 <type>js</type><name>bubble/highlighter.js</name>
+            </action>
+            <action method="addItem">
+                <type>js</type><name>mage/adminhtml/wysiwyg/tiny_mce/setup.js</name><params/><if/><condition>can_load_tiny_mce</condition>
             </action>
         </reference>
         <reference name="before_body_end">
