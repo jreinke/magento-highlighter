@@ -2,7 +2,7 @@
 /**
  * @category    Bubble
  * @package     Bubble_Highlighter
- * @version     1.1.0
+ * @version     1.1.1
  * @copyright   Copyright (c) 2015 BubbleShop (https://www.bubbleshop.net)
  */
 class Bubble_Highlighter_Block_Adminhtml_Highlighter extends Mage_Adminhtml_Block_Template

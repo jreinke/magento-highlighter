@@ -4,7 +4,7 @@
  *
  * @category    Bubble
  * @package     Bubble_Highlighter
- * @version     1.1.0
+ * @version     1.1.1
  * @copyright   Copyright (c) 2015 BubbleShop (https://www.bubbleshop.net)
  */
 class Bubble_Highlighter_Helper_Data extends Mage_Core_Helper_Abstract
