@@ -88,9 +88,10 @@ BubbleHighlighter.prototype = {
             } else {
                 content = textarea.value;
             }
-            var wysiwyg = $('wysiwyg' + baseId);
+            var wysiwyg = window['wysiwyg' + baseId];
             if (wysiwyg && typeof(wysiwyg) !== 'undefined') {
                 content = wysiwyg.decodeDirectives(content);
+                content = wysiwyg.decodeWidgets(content);
             }
             cm.getDoc().setValue(content);
         });
