@@ -11,7 +11,6 @@ BubbleHighlighter.prototype = {
         }, options || {});
     },
     setup: function(cm, textarea) {
-        cm.getWrapperElement().toggle();
         // Update doc content
         cm.getDoc().setValue(textarea.value);
         // Reindent code
@@ -134,6 +133,7 @@ BubbleHighlighter.prototype = {
         cm.getWrapperElement().setStyle({ border: '1px solid #ccc' });
 
         if (options.wysiwygEnabled) {
+            cm.getWrapperElement().toggle();
             this.setup(cm, textarea);
         }
     },
