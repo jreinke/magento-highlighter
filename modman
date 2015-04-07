@@ -1,0 +1,8 @@
+app/code/community/Bubble/Highlighter app/code/community/Bubble/Highlighter
+app/design/adminhtml/base/default/layout/bubble/highlighter.xml app/design/adminhtml/base/default/layout/bubble/highlighter.xml
+app/design/adminhtml/base/default/template/bubble/highlighter app/design/adminhtml/base/default/template/bubble/highlighter
+app/etc/modules/Bubble_Highlighter.xml app/etc/modules/Bubble_Highlighter.xml
+app/locale/en_US/Bubble_Highlighter.csv app/locale/en_US/Bubble_Highlighter.csv
+app/locale/fr_FR/Bubble_Highlighter.csv app/locale/fr_FR/Bubble_Highlighter.csv
+js/bubble/highlighter.js js/bubble/highlighter.js
+js/codemirror js/codemirror
