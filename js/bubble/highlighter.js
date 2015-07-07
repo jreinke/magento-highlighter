@@ -135,6 +135,7 @@ BubbleHighlighter.prototype = {
         if (options.wysiwygEnabled) {
             cm.getWrapperElement().toggle();
             this.setup(cm, textarea);
+            cm.getWrapperElement().setStyle({ display: 'block' });
         }
     },
     autoIndent: function(cm) {
