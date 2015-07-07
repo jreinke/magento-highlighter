@@ -2,7 +2,7 @@
 /**
  * @category    Bubble
  * @package     Bubble_Highlighter
- * @version     1.1.1
+ * @version     1.1.2
  * @copyright   Copyright (c) 2015 BubbleShop (https://www.bubbleshop.net)
  */
 class Bubble_Highlighter_Model_System_Config_Source_Theme
