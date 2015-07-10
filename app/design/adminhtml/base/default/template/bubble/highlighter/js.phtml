@@ -31,12 +31,12 @@ Event.observe(window, 'load', function() {
     }
 
     if ($('template_styles')) {
-        highlighter.create($('template_styles'));
+        highlighter.create($('template_styles')).getWrapperElement().setStyle({ display: 'block' });
     }
 
     // Handle transactional emails editor
     if ($('template_text')) {
-        highlighter.create($('template_text'));
+        highlighter.create($('template_text')).getWrapperElement().setStyle({ display: 'block' });
 
         Ajax.Responders.register({
             onComplete: function() {
