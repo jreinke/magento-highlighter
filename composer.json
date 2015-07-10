@@ -1,0 +1,22 @@
+{
+  "name": "jreinke/magento-highlighter",
+  "type":"magento-module",
+  "description": "Add Syntax Highlighting to Magento Admin.",
+  "authors": [
+    {
+      "name": "Johann Reinke"
+    }
+  ],
+  "minimum-stability": "dev",
+  "extra": {
+    "map": [
+      ["app/code/community/Bubble/*", "app/code/community/Bubble/"],
+      ["app/design/adminhtml/base/default/layout/bubble/*", "app/design/adminhtml/base/default/layout/bubble/"],
+      ["app/design/adminhtml/base/default/template/bubble/*", "app/design/adminhtml/base/default/template/bubble/"],
+      ["app/etc/modules/*", "app/etc/modules/"],
+      ["app/locale/en_US/*", "app/locale/en_US"],
+      ["app/locale/fr_FR/*", "app/locale/fr_FR"],
+      ["js/*", "js"]
+    ]
+  }
+}
