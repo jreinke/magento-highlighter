@@ -31,28 +31,22 @@ Event.observe(window, 'load', function() {
     }
 
     if ($('template_styles')) {
-        highlighter.create($('template_styles')).getWrapperElement().setStyle({ display: 'block' });
+        var styleEditor = highlighter.create($('template_styles'), 'css');
+        styleEditor.getWrapperElement().setStyle({ display: 'block' });
     }
 
     // Handle transactional emails editor
     if ($('template_text')) {
-        highlighter.create($('template_text')).getWrapperElement().setStyle({ display: 'block' });
+        var tplEditor = highlighter.create($('template_text'));
+        tplEditor.getWrapperElement().setStyle({ display: 'block' });
 
         Ajax.Responders.register({
             onComplete: function() {
                 if ($('template_text').value.length > 0) {
-                    if ($('template_text').hasClassName('bubble')) {
-                        $('template_text').next().remove();
-                        $('template_text').removeClassName('bubble')
-                    }
-                    highlighter.create($('template_text'));
+                    tplEditor.getDoc().setValue($('template_text').value);
 
                     if ($('template_styles')) {
-                        if ($('template_styles').hasClassName('bubble')) {
-                            $('template_styles').next().remove();
-                            $('template_styles').removeClassName('bubble')
-                        }
-                        highlighter.create($('template_styles'));
+                        styleEditor.getDoc().setValue($('template_styles').value);
                     }
                 }
             }

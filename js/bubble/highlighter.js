@@ -23,14 +23,18 @@ BubbleHighlighter.prototype = {
             this.create(textarea);
         }.bind(this));
     },
-    create: function(textarea) {
+    create: function(textarea, mode) {
         if (!textarea || !textarea.id || textarea.hasClassName('bubble')) return;
+
+        if (!mode) {
+            mode = 'htmlmixed';
+        }
 
         var options = this.options;
         var baseId = textarea.id;
         textarea.addClassName('bubble');
         var cm = CodeMirror.fromTextArea(textarea, {
-            mode:           'htmlmixed',
+            mode:           mode,
             theme:          options.theme,
             indentUnit:     options.indentUnit,
             lineNumbers:    options.lineNumbers,
