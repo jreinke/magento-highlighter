@@ -72,17 +72,6 @@ BubbleHighlighter.prototype = {
             textarea.selectionEnd = start;
         });
 
-        // Refresh CM when clicking on Content tab, if not CM is not rendered properly
-        if ($('page_tabs_content_section')) {
-            $('page_tabs_content_section').observe('click', function() {
-                cm.refresh();
-                this.autoIndent(cm);
-                if ($('page_content_tbl')) {
-                    cm.getWrapperElement().hide();
-                }
-            }.bind(this));
-        }
-
         // Handle insert widget and image buttons
         varienGlobalEvents.attachEventHandler('tinymceChange', function() {
             var content = '';
