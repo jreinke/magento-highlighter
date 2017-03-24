@@ -9,6 +9,17 @@ BubbleHighlighter.prototype = {
             autoCloseTags:  true,
             wysiwygEnabled: false
         }, options || {});
+        
+        // Refresh highlighter when changing tabs, for instance on the CMS page view
+        document.observe('dom:loaded', function() {
+            $$('.tab-item-link').each(function (element) {
+                element.observe('click', function () {
+                    $$('.CodeMirror').each(function (element) {
+                        element.CodeMirror.refresh();
+                    });
+                });
+            });
+        });
     },
     setup: function(cm, textarea) {
         // Update doc content
